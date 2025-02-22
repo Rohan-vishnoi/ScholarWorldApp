@@ -27,4 +27,8 @@ import {FormsModule} from "@angular/forms";
 export class LandingPageComponent {
   productImageUrl = 'path/to/your/product-image.jpg'; // Replace with your image path
   searchQuery = '';
+
+  showRegistrationPageView = ():any => {
+
+  }
 }
