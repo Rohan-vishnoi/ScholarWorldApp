@@ -1,1 +1,27 @@
-<p>landing-page works!</p>
+<mat-toolbar color="primary">
+    <h3>ScholarWorld</h3>
+    <mat-icon>storefront</mat-icon>
+    <form class="example-form">
+        <mat-form-field class="example-full-width" style="margin-left: 10px; margin-right: 10px;">
+            <mat-label>Search</mat-label>
+            <input matInput [(ngModel)]="searchQuery">
+        </mat-form-field>
+    </form>
+    <span style="flex: 1 1 auto;"></span>
+    <button class="login-button" mat-raised-button color="accent">Login</button>
+    <button class="signup-button" mat-raised-button color="accent">Sign Up</button>
+</mat-toolbar>
+
+<div style="display: flex; justify-content: center; align-items: center; height: calc(100vh - 128px); flex-direction: column; padding:20px;">
+    <mat-card style="max-width: 800px; width:100%;">
+        <img mat-card-image [src]="productImageUrl" alt="Product Image">
+        <mat-card-content>
+            <h2>Welcome to Our Product!</h2>
+            <p>
+                Discover the amazing features of our product. We provide solutions that enhance your workflow and improve efficiency.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </p>
+        </mat-card-content>
+    </mat-card>
+</div>
