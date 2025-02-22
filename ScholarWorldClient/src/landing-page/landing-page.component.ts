@@ -9,20 +9,19 @@ import { MatInputModule } from '@angular/material/input';
 import {FormsModule} from "@angular/forms";
 
 @Component({
-  selector: 'app-landing-page',
-  standalone: true,
-  imports: [
-    MatToolbarModule,
-    MatButtonModule,
-    MatIconModule,
-    MatCardModule,
-    MatDividerModule,
-    MatFormFieldModule,
-    MatInputModule,
-    FormsModule
-  ],
-  styleUrls: ['./landing-page.component.css'],
-  templateUrl: './landing-page.component.html'
+    selector: 'app-landing-page',
+    imports: [
+        MatToolbarModule,
+        MatButtonModule,
+        MatIconModule,
+        MatCardModule,
+        MatDividerModule,
+        MatFormFieldModule,
+        MatInputModule,
+        FormsModule
+    ],
+    styleUrls: ['./landing-page.component.css'],
+    templateUrl: './landing-page.component.html'
 })
 export class LandingPageComponent {
   productImageUrl = 'path/to/your/product-image.jpg'; // Replace with your image path
