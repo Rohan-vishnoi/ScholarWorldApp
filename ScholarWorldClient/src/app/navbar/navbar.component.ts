@@ -37,4 +37,8 @@ export class NavbarComponent {
   navigateToHomeScreen = (): any =>{
     this.router.navigate(['']);
   }
+
+  showLoginPageView = (): any => {
+    this.router.navigate(['/Login']);
+  }
 }

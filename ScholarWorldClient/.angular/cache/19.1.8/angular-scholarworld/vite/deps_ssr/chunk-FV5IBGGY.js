@@ -4760,7 +4760,9 @@ export {
   _ErrorStateTracker,
   ErrorStateMatcher,
   _StructuralStylesLoader,
+  MatRipple,
   MatRippleModule,
-  MatRippleLoader
+  MatRippleLoader,
+  _MatInternalFormField
 };
-//# sourceMappingURL=chunk-QMRNMDBW.js.map
+//# sourceMappingURL=chunk-FV5IBGGY.js.map
