@@ -36,3 +36,7 @@ form.example-form.ng-untouched.ng-pristine.ng-valid {
 mat-toolbar.mat-toolbar.mat-primary.mat-toolbar-single-row {
     background-color: #e0e2ec;
 }
+
+form.example-form.ng-pristine.ng-valid.ng-touched {
+    height: 54px;
+}

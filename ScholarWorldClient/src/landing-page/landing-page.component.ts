@@ -7,9 +7,11 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import {FormsModule} from "@angular/forms";
+import {NavbarComponent} from "../app/navbar/navbar.component";
 
 @Component({
     selector: 'app-landing-page',
+    standalone: true,
     imports: [
         MatToolbarModule,
         MatButtonModule,
@@ -18,16 +20,17 @@ import {FormsModule} from "@angular/forms";
         MatDividerModule,
         MatFormFieldModule,
         MatInputModule,
-        FormsModule
+        FormsModule,
+        NavbarComponent
     ],
     styleUrls: ['./landing-page.component.css'],
     templateUrl: './landing-page.component.html'
 })
 export class LandingPageComponent {
+
+
   productImageUrl = 'path/to/your/product-image.jpg'; // Replace with your image path
-  searchQuery = '';
 
-  showRegistrationPageView = ():any => {
+  constructor() { }
 
-  }
 }
