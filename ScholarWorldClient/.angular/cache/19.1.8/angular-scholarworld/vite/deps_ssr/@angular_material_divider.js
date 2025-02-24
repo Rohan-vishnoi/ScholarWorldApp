@@ -1,12 +1,12 @@
 import { createRequire } from 'module';const require = createRequire(import.meta.url);
 import {
   MatCommonModule
-} from "./chunk-FV5IBGGY.js";
-import "./chunk-WRFF4IR7.js";
+} from "./chunk-6MCDORJR.js";
+import "./chunk-6NS4GF7O.js";
 import {
   coerceBooleanProperty
-} from "./chunk-UDEHESSX.js";
-import "./chunk-BGILPUG2.js";
+} from "./chunk-XPG4OZLX.js";
+import "./chunk-FQO53UKV.js";
 import {
   ChangeDetectionStrategy,
   Component,
@@ -19,10 +19,10 @@ import {
   ɵɵdefineComponent,
   ɵɵdefineInjector,
   ɵɵdefineNgModule
-} from "./chunk-CH64OKJE.js";
+} from "./chunk-JL3U5QKT.js";
 import "./chunk-YHCV7DAQ.js";
 
-// node_modules/@angular/material/fesm2022/divider.mjs
+// ../node_modules/@angular/material/fesm2022/divider.mjs
 var MatDivider = class _MatDivider {
   /** Whether the divider is vertically aligned. */
   get vertical() {
