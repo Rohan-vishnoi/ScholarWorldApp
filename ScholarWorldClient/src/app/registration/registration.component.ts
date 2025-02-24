@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavbarComponent } from '../app/navbar/navbar.component';
+import { NavbarComponent } from '../navbar/navbar.component';
 import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import {MatInput} from '@angular/material/input';

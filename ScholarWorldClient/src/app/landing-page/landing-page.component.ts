@@ -7,7 +7,7 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import {FormsModule} from "@angular/forms";
-import {NavbarComponent} from "../app/navbar/navbar.component";
+import {NavbarComponent} from "../navbar/navbar.component";
 
 @Component({
     selector: 'app-landing-page',
