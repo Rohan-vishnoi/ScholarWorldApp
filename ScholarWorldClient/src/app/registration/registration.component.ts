@@ -7,6 +7,7 @@ import { FormsModule } from '@angular/forms';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatButtonModule } from '@angular/material/button';
 import {RegistrationService} from "../store/service/registration.service";
+import {HttpClient} from "@angular/common/http";
 
 @Component({
     selector: 'app-registration',

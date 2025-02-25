@@ -6,7 +6,9 @@ import {HttpClient} from "@angular/common/http";
     providedIn: 'root'
 })
 export class RegistrationService {
-    
+
+
+
     registerUser(registrationData: any) {
 
     }

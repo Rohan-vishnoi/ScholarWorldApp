@@ -21,7 +21,7 @@ import {NavbarComponent} from "../navbar/navbar.component";
         MatFormFieldModule,
         MatInputModule,
         FormsModule,
-        NavbarComponent
+        NavbarComponent,
     ],
     styleUrls: ['./landing-page.component.css'],
     templateUrl: './landing-page.component.html'
