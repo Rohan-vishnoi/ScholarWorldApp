@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import {RegistrationService} from "../store/service/registration.service";
+import {Store} from "@ngrx/store";
+import {RegisterUser} from "../store/actions/registration.actions";
 
 @Component({
     selector: 'app-registration',
@@ -8,7 +10,7 @@ import {RegistrationService} from "../store/service/registration.service";
 })
 export class RegistrationComponent {
 
-    constructor(private registerService: RegistrationService) {
+    constructor(private registerService: RegistrationService, private store: Store) {
     }
     registrationData = {
         firstName: '',
@@ -21,6 +23,6 @@ export class RegistrationComponent {
     };
 
     onSubmit() {
-        this.registerService.registerUser(this.registrationData);
+        this.store.dispatch(new RegisterUser(this.registrationData));
     }
 }

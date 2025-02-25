@@ -16,6 +16,7 @@ import {MatInput} from "@angular/material/input";
 import {MatCard, MatCardContent, MatCardImage} from "@angular/material/card";
 import {MatRadioButton, MatRadioGroup} from "@angular/material/radio";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import {RegistrationService} from "./app/store/service/registration.service";
 
 @NgModule({
     declarations: [
@@ -42,6 +43,7 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
     MatCardImage,
     BrowserAnimationsModule,
   ],
-    bootstrap: [AppComponent]
+  providers: [RegistrationService],
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
