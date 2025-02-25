@@ -6,6 +6,7 @@ import {MatInput} from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatButtonModule } from '@angular/material/button';
+import {RegistrationService} from "../store/service/registration.service";
 
 @Component({
     selector: 'app-registration',
@@ -23,6 +24,9 @@ import { MatButtonModule } from '@angular/material/button';
     styleUrls: ['./registration.component.css']
 })
 export class RegistrationComponent {
+
+    constructor(private registerService: RegistrationService) {
+    }
     registrationData = {
         firstName: '',
         lastName: '',
@@ -34,6 +38,6 @@ export class RegistrationComponent {
     };
 
     onSubmit() {
-        console.log('Registration Data:', this.registrationData);
+        this.registerService.registerUser(this.registrationData);
     }
 }
