@@ -1,48 +1,48 @@
 <app-navbar></app-navbar>
 
 <div class="registration-container">
-    <mat-card>
-        <form (ngSubmit)="onSubmit()" #registrationForm="ngForm">
-            <mat-form-field class="full-width">
-                <mat-label>First Name</mat-label>
-                <input matInput [(ngModel)]="registrationData.firstName" name="firstName" required>
-            </mat-form-field>
+  <mat-card>
+    <form (ngSubmit)="onSubmit()" #registrationForm="ngForm">
+      <mat-form-field class="full-width">
+        <mat-label>First Name</mat-label>
+        <input matInput [(ngModel)]="registrationData.firstName" name="firstName" required>
+      </mat-form-field>
 
-            <mat-form-field class="full-width">
-                <mat-label>Last Name</mat-label>
-                <input matInput [(ngModel)]="registrationData.lastName" name="lastName" required>
-            </mat-form-field>
+      <mat-form-field class="full-width">
+        <mat-label>Last Name</mat-label>
+        <input matInput [(ngModel)]="registrationData.lastName" name="lastName" required>
+      </mat-form-field>
 
-            <mat-form-field class="full-width">
-                <mat-label>Email</mat-label>
-                <input matInput [(ngModel)]="registrationData.email" name="email" type="email" required>
-            </mat-form-field>
+      <mat-form-field class="full-width">
+        <mat-label>Email</mat-label>
+        <input matInput [(ngModel)]="registrationData.email" name="email" type="email" required>
+      </mat-form-field>
 
-            <mat-form-field class="full-width">
-                <mat-label>Password</mat-label>
-                <input matInput [(ngModel)]="registrationData.password" name="password" type="password" required>
-            </mat-form-field>
+      <mat-form-field class="full-width">
+        <mat-label>Password</mat-label>
+        <input matInput [(ngModel)]="registrationData.password" name="password" type="password" required>
+      </mat-form-field>
 
-            <mat-form-field class="full-width">
-                <mat-label>Confirm Password</mat-label>
-                <input matInput [(ngModel)]="registrationData.confirmPassword" name="confirmPassword" type="password" required>
-            </mat-form-field>
+      <mat-form-field class="full-width">
+        <mat-label>Confirm Password</mat-label>
+        <input matInput [(ngModel)]="registrationData.confirmPassword" name="confirmPassword" type="password" required>
+      </mat-form-field>
 
-            <mat-form-field class="full-width">
-                <mat-label>Mobile Number</mat-label>
-                <input matInput [(ngModel)]="registrationData.mobileNumber" name="mobileNumber" type="tel" required>
-            </mat-form-field>
+      <mat-form-field class="full-width">
+        <mat-label>Mobile Number</mat-label>
+        <input matInput [(ngModel)]="registrationData.mobileNumber" name="mobileNumber" type="tel" required>
+      </mat-form-field>
 
-            <div class="gender-selection">
-                <label>Gender:</label>
-                <mat-radio-group [(ngModel)]="registrationData.gender" name="gender" required>
-                    <mat-radio-button value="male">Male</mat-radio-button>
-                    <mat-radio-button value="female">Female</mat-radio-button>
-                    <mat-radio-button value="other">Other</mat-radio-button>
-                </mat-radio-group>
-            </div>
+      <div class="gender-selection">
+        <label>Gender:</label>
+        <mat-radio-group [(ngModel)]="registrationData.gender" name="gender" required>
+          <mat-radio-button value="male">Male</mat-radio-button>
+          <mat-radio-button value="female">Female</mat-radio-button>
+          <mat-radio-button value="other">Other</mat-radio-button>
+        </mat-radio-group>
+      </div>
 
-            <button mat-raised-button color="primary" type="submit" [disabled]="!registrationForm.form.valid">Submit</button>
-        </form>
-    </mat-card>
+      <button mat-raised-button color="primary" type="submit" [disabled]="!registrationForm.form.valid">Submit</button>
+    </form>
+  </mat-card>
 </div>

@@ -1,42 +1,42 @@
 landing-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f5f5f5;
 }
 
 mat-card {
-    width: 400px;
-    text-align: center;
+  width: 400px;
+  text-align: center;
 }
 
 .signup-button {
-    margin-left: 5px;
-    color: black;
+  margin-left: 5px;
+  color: black;
 }
 
 .login-button {
-    color: black
+  color: black
 }
 
 .example-form {
-    min-width: 150px;
-    max-width: 500px;
-    width: 100%;
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
 }
 
 .example-full-width {
-    width: 100%;
+  width: 100%;
 }
 form.example-form.ng-untouched.ng-pristine.ng-valid {
-    margin-top: 21px;
+  margin-top: 21px;
 }
 
 mat-toolbar.mat-toolbar.mat-primary.mat-toolbar-single-row {
-    background-color: #e0e2ec;
+  background-color: #e0e2ec;
 }
 
 form.example-form.ng-pristine.ng-valid.ng-touched {
-    height: 54px;
+  height: 54px;
 }

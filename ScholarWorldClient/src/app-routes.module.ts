@@ -6,8 +6,7 @@ import {AppComponent} from "./app/app.component";
 import {NgModule} from "@angular/core";
 
 export const routes: Routes = [
-    {path:"",component:AppComponent},
-    {path:"LandingPageComponent", component: LandingPageComponent},
+    {path:"", component: LandingPageComponent},
     {path:"Registration", component: RegistrationComponent},
     {path:"Login", component: LoginComponent}
 ];
