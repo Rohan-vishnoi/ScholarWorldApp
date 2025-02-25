@@ -19,7 +19,7 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {RegistrationService} from "./app/store/service/registration.service";
 import {provideHttpClient} from "@angular/common/http";
 import {StoreModule} from "@ngrx/store";
-
+import {StoreDevtoolsModule} from "@ngrx/store-devtools";
 @NgModule({
     declarations: [
       AppComponent,
@@ -44,7 +44,8 @@ import {StoreModule} from "@ngrx/store";
     MatCardContent,
     MatCardImage,
     BrowserAnimationsModule,
-    StoreModule.forRoot({})
+    StoreModule.forRoot({}),
+    StoreDevtoolsModule.instrument({})
   ],
   providers: [
     provideHttpClient(),
