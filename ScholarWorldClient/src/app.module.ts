@@ -17,6 +17,8 @@ import {MatCard, MatCardContent, MatCardImage} from "@angular/material/card";
 import {MatRadioButton, MatRadioGroup} from "@angular/material/radio";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {RegistrationService} from "./app/store/service/registration.service";
+import {provideHttpClient} from "@angular/common/http";
+import {StoreModule} from "@ngrx/store";
 
 @NgModule({
     declarations: [
@@ -42,8 +44,11 @@ import {RegistrationService} from "./app/store/service/registration.service";
     MatCardContent,
     MatCardImage,
     BrowserAnimationsModule,
+    StoreModule.forRoot({})
   ],
-  providers: [RegistrationService],
+  providers: [
+    provideHttpClient(),
+    RegistrationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
