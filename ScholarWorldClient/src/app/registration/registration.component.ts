@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import {RegistrationService} from "../store/service/registration.service";
 import {Store} from "@ngrx/store";
 import {RegisterUser} from "../store/actions/registration.actions";
+import {AppState} from "../app.combineReducer";
 
 @Component({
     selector: 'app-registration',
@@ -10,7 +11,7 @@ import {RegisterUser} from "../store/actions/registration.actions";
 })
 export class RegistrationComponent {
 
-    constructor(private registerService: RegistrationService, private store: Store) {
+    constructor(private registerService: RegistrationService, private store: Store<AppState>) {
     }
     registrationData = {
         firstName: '',

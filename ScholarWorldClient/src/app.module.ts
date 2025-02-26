@@ -20,6 +20,9 @@ import {RegistrationService} from "./app/store/service/registration.service";
 import {provideHttpClient} from "@angular/common/http";
 import {StoreModule} from "@ngrx/store";
 import {StoreDevtoolsModule} from "@ngrx/store-devtools";
+import { EffectsModule } from '@ngrx/effects';
+import {reducers , effects} from "./app/app.combineReducer";
+
 @NgModule({
     declarations: [
       AppComponent,
@@ -28,6 +31,10 @@ import {StoreDevtoolsModule} from "@ngrx/store-devtools";
       LandingPageComponent,
       LoginComponent,
       NavbarComponent],
+  providers: [
+    RegistrationService,
+    provideHttpClient(),
+  ],
   imports: [
     BrowserModule,
     AppRoutesModule,
@@ -44,12 +51,10 @@ import {StoreDevtoolsModule} from "@ngrx/store-devtools";
     MatCardContent,
     MatCardImage,
     BrowserAnimationsModule,
-    StoreModule.forRoot({}),
-    StoreDevtoolsModule.instrument({})
+    StoreDevtoolsModule.instrument({}),
+    StoreModule.forRoot(reducers),
+    EffectsModule.forRoot(effects)
   ],
-  providers: [
-    provideHttpClient(),
-    RegistrationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
