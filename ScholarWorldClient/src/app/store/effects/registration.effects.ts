@@ -8,19 +8,18 @@ import { of } from "rxjs";
 @Injectable()
 export class RegistrationEffects {
 
-  constructor(private actions: Actions,private registrationService: RegistrationService) {}
+  constructor(
+    private actions$: Actions,
+    private registrationService: RegistrationService
+  ) {}
 
   registerUser$ = createEffect(() => {
-    return this.actions.pipe(
-      ofType(RegistrationActions.REGISTER_USER), // When 'RegisterUser' happens...
+    return this.actions$.pipe(
+      ofType(RegistrationActions.REGISTER_USER),
       mergeMap((action: RegistrationActions.RegisterUser) => {
         return this.registrationService.registerUser(action.payload).pipe(
-          map((response) => {
-            return new RegistrationActions.registerUserSuccess(response);
-          }),
-          catchError((error) => {
-            return of(new RegistrationActions.registerUserFailure(error));
-          })
+          map((response) => new RegistrationActions.registerUserSuccess({ payload: response })),
+          catchError((error) => of(new RegistrationActions.registerUserFailure({ payload: error })))
         );
       })
     );
