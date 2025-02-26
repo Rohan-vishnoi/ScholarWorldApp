@@ -1,4 +1,4 @@
-import { Injectable } from "@angular/core";
+import { Injectable, inject } from "@angular/core";
 import { RegistrationService } from "../service/registration.service";
 import { Actions, createEffect, ofType } from "@ngrx/effects";
 import * as RegistrationActions from "../actions/registration.actions";
@@ -8,10 +8,8 @@ import { of } from "rxjs";
 @Injectable()
 export class RegistrationEffects {
 
-  constructor(
-    private actions$: Actions,
-    private registrationService: RegistrationService
-  ) {}
+  private actions$ = inject(Actions);
+  private registrationService = inject(RegistrationService);
 
   registerUser$ = createEffect(() => {
     return this.actions$.pipe(
