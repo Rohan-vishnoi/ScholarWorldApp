@@ -4,6 +4,7 @@ import {registrationReducer} from "./app/store/reducer/registration.reducer";
 import {RegistrationEffects} from "./app/store/effects/registration.effects";
 import {SessionState} from "./app/store/state/session.state";
 import {sessionReducer} from "./app/store/reducer/session.reducer";
+import {SessionEffects} from "./app/store/effects/session.effects";
 
 export interface AppState{
   registrationState : RegistrationState,
@@ -12,9 +13,10 @@ export interface AppState{
 
 export const reducers: ActionReducerMap<AppState, any> = {
   registrationState : registrationReducer,
-  sessionState:sessionReducer
+  sessionState:sessionReducer,
 }
 
 export const effects = [
-  RegistrationEffects
+  RegistrationEffects,
+  SessionEffects
 ]

@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 @Service
 @Primary
 public class SelfRegistrationService implements RegistrationService{
-    private final RegistrationRepo registrationRepo;
+    private RegistrationRepo registrationRepo;
 
     public SelfRegistrationService(RegistrationRepo registrationRepo) {
         this.registrationRepo = registrationRepo;

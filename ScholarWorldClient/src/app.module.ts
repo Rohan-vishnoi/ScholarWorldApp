@@ -22,6 +22,7 @@ import { StoreModule } from "@ngrx/store";
 import { StoreDevtoolsModule } from "@ngrx/store-devtools";
 import { EffectsModule } from '@ngrx/effects';
 import {effects, reducers} from "./app.combineReducer";
+import {SessionService} from "./app/store/service/session.service";
 
 @NgModule({
   declarations: [
@@ -54,6 +55,7 @@ import {effects, reducers} from "./app.combineReducer";
   ],
   providers: [
     RegistrationService,
+    SessionService,
     provideHttpClient(),
   ],
   bootstrap: [AppComponent]

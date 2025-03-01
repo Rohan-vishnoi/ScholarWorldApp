@@ -4,7 +4,7 @@ import {Observable} from "rxjs";
 
 @Injectable({providedIn: 'root'})
 export class SessionService {
-  private loginApiUrl = 'http://localhost:8000/login';
+  private loginApiUrl = 'http://localhost:8000/check-login';
 
   constructor(private http:HttpClient) {}
 
