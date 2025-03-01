@@ -21,7 +21,7 @@ import { provideHttpClient } from "@angular/common/http";
 import { StoreModule } from "@ngrx/store";
 import { StoreDevtoolsModule } from "@ngrx/store-devtools";
 import { EffectsModule } from '@ngrx/effects';
-import { reducers, effects } from "./app/app.combineReducer";
+import {effects, reducers} from "./app.combineReducer";
 
 @NgModule({
   declarations: [
@@ -31,10 +31,6 @@ import { reducers, effects } from "./app/app.combineReducer";
     LandingPageComponent,
     LoginComponent,
     NavbarComponent
-  ],
-  providers: [
-    RegistrationService,
-    provideHttpClient(),
   ],
   imports: [
     BrowserModule,
@@ -52,9 +48,13 @@ import { reducers, effects } from "./app/app.combineReducer";
     MatCardContent,
     MatCardImage,
     BrowserAnimationsModule,
-    StoreDevtoolsModule.instrument({}),
+    StoreDevtoolsModule.instrument(),
     StoreModule.forRoot(reducers),
     EffectsModule.forRoot(effects)
+  ],
+  providers: [
+    RegistrationService,
+    provideHttpClient(),
   ],
   bootstrap: [AppComponent]
 })

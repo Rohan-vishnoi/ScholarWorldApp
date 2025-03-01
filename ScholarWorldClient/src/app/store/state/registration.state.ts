@@ -6,7 +6,7 @@
         password: string;
         confirmPassword: string;
         mobileNumber: string;
-        gender: ''
+        gender:string;
     };
 }
 

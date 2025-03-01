@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import {RegistrationService} from "../store/service/registration.service";
 import {Store} from "@ngrx/store";
 import {RegisterUser} from "../store/actions/registration.actions";
-import {AppState} from "../app.combineReducer";
+import {AppState} from "../../app.combineReducer";
 
 @Component({
     selector: 'app-registration',
