@@ -1,15 +1,15 @@
 import {inject, Injectable} from "@angular/core";
 import {Actions, createEffect, ofType} from "@ngrx/effects";
-import {SessionService} from "../service/session.service";
-import * as SessionActions from "../actions/session.actions";
+import {AuthService} from "../service/auth.service";
+import * as SessionActions from "../actions/auth.actions";
 import {catchError, map, mergeMap} from "rxjs/operators";
 import {of} from "rxjs";
 
 @Injectable()
-export class SessionEffects {
+export class AuthEffects {
 
   private actions$ = inject(Actions);
-  private sessionService = inject(SessionService);
+  private sessionService = inject(AuthService);
 
   loginUser$ = createEffect(() => {
     return this.actions$.pipe(

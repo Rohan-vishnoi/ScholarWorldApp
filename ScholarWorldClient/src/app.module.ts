@@ -17,12 +17,17 @@ import { MatCard, MatCardContent, MatCardImage } from "@angular/material/card";
 import { MatRadioButton, MatRadioGroup } from "@angular/material/radio";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { RegistrationService } from "./app/store/service/registration.service";
-import { provideHttpClient } from "@angular/common/http";
+import {HTTP_INTERCEPTORS, provideHttpClient} from "@angular/common/http";
 import { StoreModule } from "@ngrx/store";
 import { StoreDevtoolsModule } from "@ngrx/store-devtools";
 import { EffectsModule } from '@ngrx/effects';
 import {effects, reducers} from "./app.combineReducer";
-import {SessionService} from "./app/store/service/session.service";
+import {AuthService} from "./app/store/service/auth.service";
+import {JwtInterceptor, JwtModule} from "@auth0/angular-jwt";
+
+export function tokenGetter() {
+  return localStorage.getItem('token');
+}
 
 @NgModule({
   declarations: [
@@ -51,12 +56,21 @@ import {SessionService} from "./app/store/service/session.service";
     BrowserAnimationsModule,
     StoreDevtoolsModule.instrument(),
     StoreModule.forRoot(reducers),
-    EffectsModule.forRoot(effects)
+    EffectsModule.forRoot(effects),
+    JwtModule.forRoot({
+      config: {
+        tokenGetter: tokenGetter,
+        allowedDomains: ['localhost:8000'],
+        disallowedRoutes: ['http://localhost:8000/auth/login']
+      }
+    })
   ],
   providers: [
     RegistrationService,
-    SessionService,
+    AuthService,
     provideHttpClient(),
+    { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true }
+
   ],
   bootstrap: [AppComponent]
 })

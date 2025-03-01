@@ -1,11 +1,11 @@
-export interface SessionState {
+export interface AuthState {
     sessionData: {
         email: string;
         password: string;
     };
 }
 
-export const initialRegistrationState: SessionState = {
+export const initialRegistrationState: AuthState = {
   sessionData: {
     email: '',
     password: ''

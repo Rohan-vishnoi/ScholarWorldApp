@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import * as SessionActions from "../store/actions/session.actions";
+import * as SessionActions from "../store/actions/auth.actions";
 import {AppState} from "../../app.combineReducer";
 import {Store} from "@ngrx/store";
 
