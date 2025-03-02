@@ -1,21 +1,21 @@
 package org.scholarworld.scholarworld.Services;
 
-import org.scholarworld.scholarworld.models.Registration;
-import org.scholarworld.scholarworld.repositories.RegistrationRepo;
+import org.scholarworld.scholarworld.entities.User;
+import org.scholarworld.scholarworld.repositories.UserRepository;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
 @Service
 @Primary
 public class SelfRegistrationService implements RegistrationService{
-    private RegistrationRepo registrationRepo;
+    private UserRepository userRepository;
 
-    public SelfRegistrationService(RegistrationRepo registrationRepo) {
-        this.registrationRepo = registrationRepo;
+    public SelfRegistrationService(UserRepository userRepository) {
+        this.userRepository = userRepository;
     }
 
     @Override
-    public Registration createRegistration(Registration registration) {
-        return registrationRepo.save(registration);
+    public User createRegistration(User user) {
+        return userRepository.save(user);
     }
 }

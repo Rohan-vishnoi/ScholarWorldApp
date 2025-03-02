@@ -1,4 +1,4 @@
-package org.scholarworld.scholarworld.models;
+package org.scholarworld.scholarworld.entities;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
@@ -8,7 +8,29 @@ import lombok.Setter;
 @Setter
 @Getter
 @Entity
-public class Product extends BaseModels {
+public class Product {
+
+    public Long getId() {
+        return Id;
+    }
+
+    public void setId(Long id) {
+        Id = id;
+    }
+
+    public String getCreatedAt() {
+        return createdAt;
+    }
+
+    public void setCreatedAt(String createdAt) {
+        this.createdAt = createdAt;
+    }
+
+    @jakarta.persistence.Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY) //Auto Increment
+
+    private Long Id;
+    private String createdAt;
 
     @JsonProperty("title")
     private String title;

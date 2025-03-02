@@ -1,7 +1,7 @@
 package org.scholarworld.scholarworld.controllers;
 import org.scholarworld.scholarworld.Exceptions.ProductLimitReachedException;
 import org.scholarworld.scholarworld.Services.ProductService;
-import org.scholarworld.scholarworld.models.Product;
+import org.scholarworld.scholarworld.entities.Product;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;

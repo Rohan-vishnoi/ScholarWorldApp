@@ -1,8 +1,8 @@
 package org.scholarworld.scholarworld.Services;
 
 import org.scholarworld.scholarworld.dtos.FakeStoreProductDto;
-import org.scholarworld.scholarworld.models.Category;
-import org.scholarworld.scholarworld.models.Product;
+import org.scholarworld.scholarworld.entities.Category;
+import org.scholarworld.scholarworld.entities.Product;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatusCode;
 import org.springframework.stereotype.Service;

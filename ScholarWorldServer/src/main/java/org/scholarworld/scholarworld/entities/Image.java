@@ -1,17 +1,9 @@
-package org.scholarworld.scholarworld.models;
-
+package org.scholarworld.scholarworld.entities;
 
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.MappedSuperclass;
-import lombok.Getter;
-import lombok.Setter;
 
-@MappedSuperclass
-@Getter
-@Setter
-public abstract class BaseModels {
+public class Image {
     public Long getId() {
         return Id;
     }
@@ -33,4 +25,13 @@ public abstract class BaseModels {
 
     private Long Id;
     private String createdAt;
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
+
+    private String url;
 }

@@ -1,6 +1,6 @@
 package org.scholarworld.scholarworld.Services;
 
-import org.scholarworld.scholarworld.models.Product;
+import org.scholarworld.scholarworld.entities.Product;
 import org.springframework.http.HttpStatusCode;
 
 import java.util.List;

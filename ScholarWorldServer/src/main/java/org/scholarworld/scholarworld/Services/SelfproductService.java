@@ -1,8 +1,8 @@
 package org.scholarworld.scholarworld.Services;
 
 import jakarta.persistence.EntityNotFoundException;
-import org.scholarworld.scholarworld.models.Category;
-import org.scholarworld.scholarworld.models.Product;
+import org.scholarworld.scholarworld.entities.Category;
+import org.scholarworld.scholarworld.entities.Product;
 import org.scholarworld.scholarworld.repositories.CategoryRepo;
 import org.scholarworld.scholarworld.repositories.ProductRepo;
 import org.springframework.context.annotation.Primary;
