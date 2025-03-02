@@ -1,9 +1,7 @@
 package org.scholarworld.scholarworld.Services;
 
-import org.scholarworld.scholarworld.models.Category;
-import org.scholarworld.scholarworld.models.Product;
 import org.scholarworld.scholarworld.models.Registration;
-import org.scholarworld.scholarworld.repos.RegistrationRepo;
+import org.scholarworld.scholarworld.repositories.RegistrationRepo;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 

@@ -1,4 +1,4 @@
-package org.scholarworld.scholarworld.repos;
+package org.scholarworld.scholarworld.repositories;
 
 import org.scholarworld.scholarworld.models.Category;
 import org.springframework.data.jpa.repository.JpaRepository;

@@ -1,7 +1,7 @@
 package org.scholarworld.scholarworld.Services;
 
 import org.scholarworld.scholarworld.models.Login;
-import org.scholarworld.scholarworld.repos.LoginRepo;
+import org.scholarworld.scholarworld.repositories.LoginRepo;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
