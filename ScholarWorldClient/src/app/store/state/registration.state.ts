@@ -1,23 +1,15 @@
  export interface RegistrationState {
     registrationData: {
-        firstName: string;
-        lastName: string;
+        fullName: string;
         email: string;
         password: string;
-        confirmPassword: string;
-        mobileNumber: string;
-        gender:string;
     };
 }
 
 export const initialState: RegistrationState = {
     registrationData: {
-        firstName: '',
-        lastName: '',
+        fullName:'',
         email: '',
         password: '',
-        confirmPassword: '',
-        mobileNumber: '',
-        gender: ''
     }
 }

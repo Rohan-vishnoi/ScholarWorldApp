@@ -14,13 +14,9 @@ export class RegistrationComponent {
     constructor(private registerService: RegistrationService, private store: Store<AppState>) {
     }
     registrationData = {
-        firstName: '',
-        lastName: '',
+        fullName:'',
         email: '',
-        password: '',
-        confirmPassword: '',
-        mobileNumber: '',
-        gender: ''
+        password: ''
     };
 
     onSubmit() {

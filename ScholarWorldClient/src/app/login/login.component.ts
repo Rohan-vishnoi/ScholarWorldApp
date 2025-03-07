@@ -13,7 +13,7 @@ export class LoginComponent {
   constructor(private store: Store<AppState>) {}
 
   loginData = {
-    username: '',
+    email: '',
     password: ''
   };
 
