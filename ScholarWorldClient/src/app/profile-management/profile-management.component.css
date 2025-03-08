@@ -1,4 +1,4 @@
-.forget-password-container {
+.profile-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -7,12 +7,7 @@
 }
 
 mat-card {
-  max-width: 400px;
+  max-width: 600px; /* Increase the maximum width */
   width: 100%;
   padding: 20px; /* Add padding to the card */
-}
-
-.full-width {
-  width: 100%;
-  margin-bottom: 20px; /* Add margin to the form fields */
 }

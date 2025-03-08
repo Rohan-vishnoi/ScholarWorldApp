@@ -40,3 +40,13 @@ mat-toolbar.mat-toolbar.mat-primary.mat-toolbar-single-row {
 form.example-form.ng-pristine.ng-valid.ng-touched {
   height: 54px;
 }
+
+.mat-mdc-raised-button:not(:disabled){
+  color:black;
+}
+
+.profile-icon {
+  font-size: 36px; /* Adjust the size as needed */
+  width: 36px;
+  height: 36px;
+}

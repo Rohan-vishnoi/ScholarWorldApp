@@ -22,4 +22,8 @@ export class NavbarComponent {
   showLoginPageView = (): any => {
     this.router.navigate(['/Login']);
   }
+
+  showProfileManagementView = (): any => {
+    this.router.navigate(['/ProfileManagement']);
+  }
 }

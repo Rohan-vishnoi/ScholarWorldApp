@@ -13,7 +13,12 @@ import { MatIcon } from "@angular/material/icon";
 import { MatToolbar } from "@angular/material/toolbar";
 import { MatButton } from "@angular/material/button";
 import { MatInput } from "@angular/material/input";
-import { MatCard, MatCardContent, MatCardImage } from "@angular/material/card";
+import {
+  MatCard,
+  MatCardContent,
+  MatCardImage,
+  MatCardModule,
+} from "@angular/material/card";
 import { MatRadioButton, MatRadioGroup } from "@angular/material/radio";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { RegistrationService } from "./app/store/service/registration.service";
@@ -24,6 +29,8 @@ import { EffectsModule } from '@ngrx/effects';
 import {effects, reducers} from "./app.combineReducer";
 import {AuthService} from "./app/store/service/auth.service";
 import {JwtInterceptor, JwtModule} from "@auth0/angular-jwt";
+import { ProfileManagementComponent } from './app/profile-management/profile-management.component';
+import { ProductCatalogComponent } from './app/product-catalog/product-catalog.component';
 
 export function tokenGetter() {
   return localStorage.getItem('token');
@@ -36,7 +43,9 @@ export function tokenGetter() {
     ForgetPasswordComponent,
     LandingPageComponent,
     LoginComponent,
-    NavbarComponent
+    NavbarComponent,
+    ProfileManagementComponent,
+    ProductCatalogComponent
   ],
   imports: [
     BrowserModule,
@@ -63,7 +72,8 @@ export function tokenGetter() {
         allowedDomains: ['localhost:8000'],
         disallowedRoutes: ['http://localhost:8000/auth/login']
       }
-    })
+    }),
+    MatCardModule
   ],
   providers: [
     RegistrationService,
