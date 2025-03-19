@@ -8,7 +8,7 @@ import { FormsModule } from "@angular/forms";
 import { NavbarComponent } from "./app/navbar/navbar.component";
 import { LandingPageComponent } from "./app/landing-page/landing-page.component";
 import { LoginComponent } from "./app/login/login.component";
-import { MatFormField, MatLabel } from "@angular/material/form-field";
+import {MatError, MatFormField, MatLabel} from "@angular/material/form-field";
 import { MatIcon } from "@angular/material/icon";
 import { MatToolbar } from "@angular/material/toolbar";
 import { MatButton } from "@angular/material/button";
@@ -63,7 +63,6 @@ export function tokenGetter() {
     MatCardContent,
     MatCardImage,
     BrowserAnimationsModule,
-    StoreDevtoolsModule.instrument(),
     StoreModule.forRoot(reducers),
     EffectsModule.forRoot(effects),
     JwtModule.forRoot({
@@ -73,7 +72,9 @@ export function tokenGetter() {
         disallowedRoutes: ['http://localhost:8000/auth/login']
       }
     }),
-    MatCardModule
+    StoreDevtoolsModule.instrument(),
+    MatCardModule,
+    MatError
   ],
   providers: [
     RegistrationService,

@@ -13,6 +13,8 @@ export class RegistrationComponent {
 
     constructor(private registerService: RegistrationService, private store: Store<AppState>) {
     }
+
+
     registrationData = {
         fullName:'',
         email: '',

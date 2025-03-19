@@ -5,17 +5,26 @@
     <form (ngSubmit)="onSubmit()" #registrationForm="ngForm">
       <mat-form-field class="full-width">
         <mat-label>First Name</mat-label>
-        <input matInput [(ngModel)]="registrationData.fullName" name="firstName" required>
+        <input matInput [(ngModel)]="registrationData.fullName" name="firstName" required pattern="^[a-zA-Z\s]*$">
+        <mat-error *ngIf="registrationForm.controls['firstName']?.invalid && registrationForm.controls['firstName']?.touched">
+          First Name cannot contain numbers.
+        </mat-error>
       </mat-form-field>
 
       <mat-form-field class="full-width">
         <mat-label>Email</mat-label>
-        <input matInput [(ngModel)]="registrationData.email" name="email" type="email" required>
+        <input matInput [(ngModel)]="registrationData.email" name="email" type="email" pattern="^[^@\s]+@[^@\s]+\.[^@\s]+$" required>
+        <mat-error *ngIf="registrationForm.controls['email']?.invalid && registrationForm.controls['email']?.touched">
+          Please enter a valid email address.
+        </mat-error>
       </mat-form-field>
 
       <mat-form-field class="full-width">
         <mat-label>Password</mat-label>
-        <input matInput [(ngModel)]="registrationData.password" name="password" type="password" required>
+        <input matInput [(ngModel)]="registrationData.password" name="password" type="password" required pattern="^(?=.*[A-Z])(?=.*\d).+$">
+        <mat-error *ngIf="registrationForm.controls['password']?.invalid && registrationForm.controls['password']?.touched">
+          Password must contain at least one uppercase letter and one number.
+        </mat-error>
       </mat-form-field>
 
       <button mat-raised-button color="primary" type="submit" [disabled]="!registrationForm.form.valid">Submit</button>
