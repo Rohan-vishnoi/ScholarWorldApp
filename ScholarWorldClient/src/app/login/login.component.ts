@@ -18,6 +18,8 @@ export class LoginComponent {
     password: ''
   };
 
+
+
   ViewForgetPassword() {
     this.router.navigate(['/ForgetPassword']);
   }

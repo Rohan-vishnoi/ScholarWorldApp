@@ -10,6 +10,16 @@ export interface AuthState {
       accountNonLocked: boolean;
       credentialsNonExpired: boolean;
     };
+
+    authData: {
+      token:string,
+      expiresIn:string
+    }
+
+    loginData:{
+      email: string;
+      password: string;
+    }
 }
 
 export const initialRegistrationState: AuthState = {
@@ -23,5 +33,13 @@ export const initialRegistrationState: AuthState = {
     accountNonExpired: false,
     accountNonLocked: false,
     credentialsNonExpired: false
+  },
+  authData: {
+    token: '',
+    expiresIn: ''
+  },
+  loginData: {
+    email: '',
+    password: ''
   }
 }

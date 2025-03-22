@@ -1,5 +1,9 @@
 import { Component } from '@angular/core';
 import {Router} from "@angular/router";
+import {Store} from "@ngrx/store";
+import {AppState} from "../../app.combineReducer";
+import {Subject, takeUntil} from "rxjs";
+import {logOutUser} from "../store/actions/auth.actions";
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
@@ -8,9 +12,28 @@ import {Router} from "@angular/router";
 export class NavbarComponent {
   searchQuery = '';
 
-  constructor(private router: Router) { }
+  private unsubscribe$ = new Subject<void>();
+
+  constructor(private router: Router, private store: Store<AppState>) { }
 
 
+  isLoginButton:boolean = true;
+
+  ngOnInit() {
+    this.store.select((state) => state.authState.authData)
+      .pipe(takeUntil(this.unsubscribe$))
+      .subscribe((authData) => {
+        if (authData.token) {
+          this.isLoginButton = false;
+          this.router.navigate(['']);
+        }
+      });
+  }
+
+  ngOnDestroy() {
+    this.unsubscribe$.next();
+    this.unsubscribe$.complete();
+  }
   showRegistrationPageView = ():any => {
     this.router.navigate(['/Registration']);
   }
@@ -25,5 +48,9 @@ export class NavbarComponent {
 
   showProfileManagementView = (): any => {
     this.router.navigate(['/ProfileManagement']);
+  }
+
+  logout = (): any => {
+    this.store.dispatch(new logOutUser());
   }
 }
