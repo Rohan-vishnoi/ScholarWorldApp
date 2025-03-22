@@ -5,6 +5,7 @@ import {RegistrationEffects} from "./app/store/effects/registration.effects";
 import {AuthState} from "./app/store/state/auth.state";
 import {authReducer} from "./app/store/reducer/auth.reducer";
 import {AuthEffects} from "./app/store/effects/auth.effects";
+import {ProductEffects} from "./app/store/effects/product.effects";
 
 export interface AppState{
   registrationState : RegistrationState,
@@ -18,5 +19,6 @@ export const reducers: ActionReducerMap<AppState, any> = {
 
 export const effects = [
   RegistrationEffects,
-  AuthEffects
+  AuthEffects,
+  ProductEffects
 ]
