@@ -26,6 +26,9 @@ export class NavbarComponent {
         if (authData.token) {
           this.isLoginButton = false;
           this.router.navigate(['']);
+        } else {
+          this.isLoginButton = true;
+          this.router.navigate(['Login']);
         }
       });
   }

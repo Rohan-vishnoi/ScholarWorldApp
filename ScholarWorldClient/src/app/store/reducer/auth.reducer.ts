@@ -10,6 +10,8 @@ export const authReducer = (state: AuthState = initialRegistrationState, action:
         return handleLoginUserSuccess(state, action);
     case SessionActions.REGISTER_USER_SUCCESS:
       return handleUserRegistrationSuccess(state, action);
+    case SessionActions.LOGOUT_USER:
+      return handleLogOutUser(state, action);
     default:
       return state;
   }
@@ -33,7 +35,14 @@ export const authReducer = (state: AuthState = initialRegistrationState, action:
       return {
         ...state,
         sessionData: action.payload
+      }
     }
+
+    export const handleLogOutUser = (state: AuthState, action: SessionActions.logOutUser): AuthState => {
+      return {
+        ...state,
+        authData: initialRegistrationState.authData
+      }
   }
 
 

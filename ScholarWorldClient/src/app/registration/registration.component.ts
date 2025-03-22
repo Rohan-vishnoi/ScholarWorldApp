@@ -11,7 +11,7 @@ import {AppState} from "../../app.combineReducer";
 })
 export class RegistrationComponent {
 
-    constructor(private registerService: RegistrationService, private store: Store<AppState>) {
+    constructor( private store: Store<AppState>) {
     }
 
 
