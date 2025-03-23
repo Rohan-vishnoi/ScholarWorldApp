@@ -1,5 +1,6 @@
 package org.scholarworld.scholarworld.entities;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
 import lombok.Getter;
@@ -32,6 +33,7 @@ public class Product {
     @JsonProperty("category")
     @ManyToOne(cascade = CascadeType.PERSIST)
     @JoinColumn
+    @JsonManagedReference
     private Category category;
 
     @JsonProperty("description")

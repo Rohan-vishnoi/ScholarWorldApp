@@ -1,5 +1,7 @@
 package org.scholarworld.scholarworld.entities;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -53,6 +55,8 @@ public class Category{
     }
 
     private String title;
+
     @OneToMany(mappedBy = "category")
+    @JsonBackReference
     private List<Product> productList;
 }
