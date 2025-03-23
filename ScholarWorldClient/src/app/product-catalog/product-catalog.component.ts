@@ -19,7 +19,14 @@ export class ProductCatalogComponent {
   ngOnInit(){
     this.getProducts();
   }
-
+  product = {
+    title: 'Example Product',
+    description: 'This is an example product description. It contains various details about the product.',
+    imageUrl: '',
+    category: 'Electronics',
+    rate:"4.5",
+    count:300
+  };
 
   getProducts = ():any => {
     this.store.dispatch(new ProductActions.getProduct({

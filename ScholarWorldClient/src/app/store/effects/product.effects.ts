@@ -4,13 +4,14 @@ import {catchError, map, mergeMap} from "rxjs/operators";
 import {of} from "rxjs";
 import {ProductService} from "../service/product.service";
 import * as ProductActions from "../actions/product.actions";
+import {MatSnackBar} from "@angular/material/snack-bar";
 
 @Injectable()
 export class ProductEffects{
 
 private actions$= inject(Actions);
 private productService= inject(ProductService);
-
+private snackBar= inject(MatSnackBar);
 
 
   getProducts$ = createEffect(() => {
@@ -22,6 +23,9 @@ private productService= inject(ProductService);
             return new ProductActions.getProductFromServerSuccess({ payload: response });
           }),
           catchError((error) => {
+            this.snackBar.open('Failed to get products!', 'Close', {
+              duration: 3000,
+            });
             return of(new ProductActions.getProductFromServerFailure({ payload: error }));
           })
         );

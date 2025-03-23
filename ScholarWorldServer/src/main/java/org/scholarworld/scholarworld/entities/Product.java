@@ -18,19 +18,10 @@ public class Product {
         Id = id;
     }
 
-    public String getCreatedAt() {
-        return createdAt;
-    }
-
-    public void setCreatedAt(String createdAt) {
-        this.createdAt = createdAt;
-    }
-
     @jakarta.persistence.Id
     @GeneratedValue(strategy = GenerationType.IDENTITY) //Auto Increment
 
     private Long Id;
-    private String createdAt;
 
     @JsonProperty("title")
     private String title;
@@ -45,6 +36,28 @@ public class Product {
 
     @JsonProperty("description")
     private String description;
+
+    @JsonProperty("image")
+    private String image;
+
+    public Rating getRating() {
+        return rating;
+    }
+
+    public void setRating(Rating rating) {
+        this.rating = rating;
+    }
+
+    private Rating rating;
+
+    @Setter
+    @Getter
+    @Embeddable
+    public static class Rating {
+
+        private double rate;
+        private int count;
+    }
 
     public String getTitle() {
         return title;
