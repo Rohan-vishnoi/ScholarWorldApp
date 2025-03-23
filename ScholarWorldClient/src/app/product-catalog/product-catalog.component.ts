@@ -3,7 +3,6 @@ import {Store} from "@ngrx/store";
 import {AppState} from "../../app.combineReducer";
 import * as ProductActions from "../store/actions/product.actions";
 import {Subject, takeUntil} from "rxjs";
-import {getProduct} from "../store/actions/product.actions";
 
 @Component({
   selector: 'app-product-catalog',
@@ -13,9 +12,6 @@ import {getProduct} from "../store/actions/product.actions";
 export class ProductCatalogComponent {
 
   private unsubscribe$ = new Subject<void>();
-
-  private tokenId: string= "";
-
 
   constructor(private store: Store<AppState>) {
   }
@@ -27,16 +23,18 @@ export class ProductCatalogComponent {
 
   getProducts = ():any => {
     this.store.dispatch(new ProductActions.getProduct({
-      tokenIdentifier:this.tokenId
+      tokenIdentifier:this.getTokenId()
     }));
   }
 
   getTokenId = () => {
+    let tokenId: string = "";
     this.store.select((state) => state.authState.authData)
       .pipe(takeUntil(this.unsubscribe$))
       .subscribe((authData) => {
-        this.tokenId = authData.token;
-      })
+        tokenId = authData.token;
+      });
+    return tokenId;
   }
 
 

@@ -10,8 +10,12 @@ export class ProductService {
 
   constructor(private http:HttpClient) {}
 
-  getProducts(payload: any): Observable<any> {
-    const headers:HttpHeaders = new HttpHeaders({'Content-Type': 'application/json'});
-    return this.http.post(this.productApiUrl, payload, {headers});
+    getProducts(token: any): Observable<any> {
+    const headers = new HttpHeaders(
+      {
+        'Authorization': `Bearer ${token.tokenIdentifier}`,
+        'Content-Type': 'application/json'
+    });
+    return this.http.get(this.productApiUrl, {headers});
   }
 }

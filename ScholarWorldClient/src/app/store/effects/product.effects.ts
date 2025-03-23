@@ -1,7 +1,7 @@
 import {inject, Injectable} from "@angular/core";
 import {Actions, createEffect, ofType} from "@ngrx/effects";
-import {catchError, map, mergeMap, take} from "rxjs/operators";
-import {of, takeUntil} from "rxjs";
+import {catchError, map, mergeMap} from "rxjs/operators";
+import {of} from "rxjs";
 import {ProductService} from "../service/product.service";
 import * as ProductActions from "../actions/product.actions";
 import {AppState} from "../../../app.combineReducer";
@@ -19,9 +19,8 @@ private store=inject(Store<AppState>);
     return this.actions$.pipe(
       ofType(ProductActions.GET_PRODUCT),
       mergeMap((action: ProductActions.getProduct) => {
-          return this.productService.getProducts(action).pipe(
+          return this.productService.getProducts(action.payload).pipe(
           map((response) => {
-            this.store.select((state) => state.authState.authData)
             return new ProductActions.getProductFromServerSuccess({ payload: response });
           }),
           catchError((error) => {

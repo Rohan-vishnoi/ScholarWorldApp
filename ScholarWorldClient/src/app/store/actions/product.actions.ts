@@ -8,17 +8,17 @@ export const GET_PRODUCT_FROM_SERVER_FAILURE = '[Product] Get Product From Serve
 
 export class getProduct implements Action {
   readonly type = GET_PRODUCT;
-  constructor(payload:any) {}
+  constructor(public payload:{tokenIdentifier:string}) {}
 }
 
 export class getProductFromServerSuccess implements Action {
   readonly type = GET_PRODUCT_FROM_SERVER_SUCCESS;
-  constructor(payload:any) {}
+  constructor(public payload:any) {}
 }
 
 export class getProductFromServerFailure implements Action {
   readonly type = GET_PRODUCT_FROM_SERVER_FAILURE;
-  constructor(payload:any) {}
+  constructor(public payload:any) {}
 }
 
 export type ProductActions = getProduct | getProductFromServerSuccess | getProductFromServerFailure;
