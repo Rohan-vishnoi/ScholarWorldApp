@@ -7,3 +7,15 @@ img {
   object-fit: cover;
   height: 200px;
 }
+
+/* src/app/product-catalog/product-catalog.component.css */
+.product-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px; /* Adjust the gap between cards as needed */
+}
+
+mat-card {
+  flex: 1 1 calc(33.333% - 16px); /* Adjust the width of the cards as needed */
+  box-sizing: border-box;
+}

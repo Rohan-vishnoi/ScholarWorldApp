@@ -13,20 +13,18 @@ export class ProductCatalogComponent {
 
   private unsubscribe$ = new Subject<void>();
 
+  product:any = [];
+
   constructor(private store: Store<AppState>) {
   }
 
   ngOnInit(){
     this.getProducts();
+    this.store.select((state) => state.productState.productData).subscribe((productData) => {
+      this.product = productData;
+      console.log(this.product);
+    });
   }
-  product = {
-    title: 'Example Product',
-    description: 'This is an example product description. It contains various details about the product.',
-    imageUrl: '',
-    category: 'Electronics',
-    rate:"4.5",
-    count:300
-  };
 
   getProducts = ():any => {
     this.store.dispatch(new ProductActions.getProduct({

@@ -42,24 +42,12 @@ public class Product {
     @JsonProperty("image")
     private String image;
 
-    public Rating getRating() {
-        return rating;
-    }
+    @JsonProperty("rate")
+    private double rate;
 
-    public void setRating(Rating rating) {
-        this.rating = rating;
-    }
+    @JsonProperty("count")
+    private int count;
 
-    private Rating rating;
-
-    @Setter
-    @Getter
-    @Embeddable
-    public static class Rating {
-
-        private double rate;
-        private int count;
-    }
 
     public String getTitle() {
         return title;
