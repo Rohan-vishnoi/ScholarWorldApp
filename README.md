@@ -43,11 +43,11 @@ ScholarWorldApp is an ecommerce application specifically designed to cater to th
 ## Installation
 
 Follow these steps to set up the development environment for ScholarWorldApp:
-
+```
 1. **Clone the repository:**
-   ```sh
+ ```sh
    git clone https://github.com/Rohan-vishnoi/ScholarWorldApp.git
-   ```
+  ```
 
 2. **Navigate to the project directory:**
    ```sh
