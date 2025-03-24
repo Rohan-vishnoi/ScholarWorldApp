@@ -31,6 +31,7 @@ import {AuthService} from "./app/store/service/auth.service";
 import {JwtInterceptor, JwtModule} from "@auth0/angular-jwt";
 import { ProfileManagementComponent } from './app/profile-management/profile-management.component';
 import { ProductCatalogComponent } from './app/product-catalog/product-catalog.component';
+import {CartComponent} from "./app/cart/cart.component";
 
 export function tokenGetter() {
   return localStorage.getItem('token');
@@ -45,7 +46,8 @@ export function tokenGetter() {
     LoginComponent,
     NavbarComponent,
     ProfileManagementComponent,
-    ProductCatalogComponent
+    ProductCatalogComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,

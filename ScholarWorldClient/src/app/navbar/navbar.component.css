@@ -49,4 +49,12 @@ form.example-form.ng-pristine.ng-valid.ng-touched {
   font-size: 36px; /* Adjust the size as needed */
   width: 36px;
   height: 36px;
+  margin-left: 10px;
+}
+
+.shopping_cart{
+  font-size: 36px; /* Adjust the size as needed */
+  width: 36px;
+  height: 36px;
+  margin-left: 10px;
 }

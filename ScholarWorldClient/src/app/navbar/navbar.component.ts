@@ -56,4 +56,8 @@ export class NavbarComponent {
   logout = (): any => {
     this.store.dispatch(new logOutUser());
   }
+
+  showCartView = (): any => {
+      this.router.navigate(['/cart']);
+  }
 }

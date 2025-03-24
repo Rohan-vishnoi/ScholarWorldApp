@@ -11,5 +11,6 @@
   <button class="login-button" *ngIf="isLoginButton" mat-raised-button color="accent" (click)="showLoginPageView()">Login</button>
   <button class="signup-button" *ngIf="isLoginButton" mat-raised-button color="accent" (click)="showRegistrationPageView()">Sign Up</button>
   <button class="logout-button" *ngIf="!isLoginButton" mat-raised-button color="accent" (click)="logout()">Logout</button>
+  <mat-icon class="shopping_cart" *ngIf="!isLoginButton" (click)="showCartView()">shopping_cart</mat-icon>
   <mat-icon (click)="showProfileManagementView()" class="profile-icon">account_circle</mat-icon>
 </mat-toolbar>
