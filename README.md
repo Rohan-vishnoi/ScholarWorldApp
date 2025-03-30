@@ -298,60 +298,7 @@ The application likely requires configuration for things like database connectio
 
 ## Project Structure
 
-ScholarWorldApp/
-│
-├── backend/                 # Root directory for the Java/Spring Boot backend (Maven based)
-│   │
-│   ├── src/                 # Source code directory
-│   │   ├── main/            # Main application code and resources
-│   │   │   ├── java/        # Core Java source files
-│   │   │   │   └── com/yourcompany/scholarworldapp/  # Package structure (adjust as needed)
-│   │   │   │       ├── controller/  # Handles incoming HTTP requests (API endpoints)
-│   │   │   │       ├── service/     # Contains business logic
-│   │   │   │       ├── repository/  # Data access layer (interfaces for DB interaction)
-│   │   │   │       ├── model/       # Domain objects/entities representing data
-│   │   │   │       └── config/      # Configuration classes (e.g., Security, Beans)
-│   │   │   │       └── dto/         # Data Transfer Objects (for API request/response)
-│   │   │   │       └── ScholarWorldAppApplication.java # Main application entry point
-│   │   │   │
-│   │   │   └── resources/   # Non-Java files included in the build
-│   │   │       ├── application.properties  # Main application configuration (or .yml)
-│   │   │       ├── static/      # Static web resources served directly (if any)
-│   │   │       └── templates/   # Server-side templates (e.g., Thymeleaf, if used)
-│   │   │       └── db/migration/ # Database migration scripts (if using Flyway/Liquibase)
-│   │   │
-│   │   └── test/            # Source code for tests
-│   │       └── java/        # Java test files (unit, integration tests)
-│   │           └── com/yourcompany/scholarworldapp/ # Mirrored package structure for tests
-│   │
-│   ├── pom.xml              # Maven Project Object Model: Defines dependencies, plugins, build lifecycle
-│   └── target/              # Output directory for Maven builds (compiled .class files, JAR/WAR artifacts). (This directory is usually ignored by Git).
-│
-├── frontend/                # Root directory for the TypeScript/[Specify Framework, e.g., React] Frontend
-│   │
-│   ├── public/              # Static assets served directly by the web server
-│   │   ├── index.html       # The main HTML page entry point for the SPA
-│   │   └── favicon.ico      # Browser tab icon
-│   │   └── ...              # Other static files (robots.txt, manifests)
-│   │
-│   ├── src/                 # Main frontend application source code
-│   │   ├── assets/          # Static assets used by components (images, fonts, global CSS)
-│   │   ├── components/      # Reusable UI elements (buttons, inputs, cards, layout parts)
-│   │   ├── pages/           # Components representing entire application pages/views/routes
-│   │   ├── services/        # Logic for interacting with the backend API (fetching data)
-│   │   ├── store/           # Global state management setup (e.g., Redux, Zustand, Context API) - if applicable
-│   │   ├── hooks/           # Custom React Hooks (if using React)
-│   │   ├── types/           # TypeScript type definitions/interfaces
-│   │   ├── App.tsx          # The main application component orchestrating pages/routes
-│   │   └── index.tsx        # The entry point script that renders the app into the DOM (or main.ts for Angular/Vue)
-│   │
-│   ├── package.json         # Lists frontend dependencies and defines npm scripts (start, build, test)
-│   ├── tsconfig.json        # TypeScript compiler options for the frontend project
-│   └── README.md            # Optional: Frontend-specific documentation
-│
-├── .gitignore               # Specifies files and directories intentionally excluded from Git version control (e.g., node_modules, target/, .env)
-├── LICENSE                  # Contains the project's software license information (e.g., MIT)
-└── README.md                # This file: The main documentation for the entire project
+![Uploading Screenshot 2025-03-30 at 4.53.29 PM.png…]()
 
 
 
