@@ -139,9 +139,16 @@ The application likely requires configuration for things like database connectio
 5.  **Checkout:** Review your cart and proceed through the checkout process.
 
 ## Project Structure
-You got it. Here is the complete README file in a single block for easy copying:
 
-![Uploading Screenshot 2025-03-30 at 4.53.29 PM.png…]()
+ScholarWorldApp/
+├── ui/                # Frontend code
+│   ├── src/           # Source files
+│   ├── public/        # Public files
+│   └── package.json   # Frontend dependencies
+├── server/            # Backend code
+│   ├── src/           # Source files
+│   └── pom.xml        # Backend dependencies
+└── README.md          # Project documentation
 
 
 
