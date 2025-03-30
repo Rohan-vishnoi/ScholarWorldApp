@@ -1,10 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
+import {NavbarComponent} from "./navbar/navbar.component";
+import {RouterModule} from "@angular/router";
 
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [AppComponent],
+      declarations:[AppComponent,NavbarComponent],
+      imports: [RouterModule],
     }).compileComponents();
   });
 
