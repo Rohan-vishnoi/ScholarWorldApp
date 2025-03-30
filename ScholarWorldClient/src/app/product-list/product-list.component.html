@@ -1,0 +1,26 @@
+<h2>Products</h2>
+
+<div *ngIf="error" class="alert alert-danger">
+  {{ error }}
+</div>
+
+<div class="product-grid" *ngIf="(products$ | async) as products; else loading">
+  <div *ngIf="products.length === 0 && !error">No products found.</div>
+
+  <div class="product-card" *ngFor="let product of products">
+    <h3>{{ product.name }}</h3>
+    <p>{{ product.description }}</p>
+    <p><strong>Price:</strong> {{ product.price | currency:'USD' }}</p>
+    <button (click)="addToCart(product)">Add to Cart</button>
+  </div>
+</div>
+
+<ng-template #loading>
+  <p>Loading products...</p>
+</ng-template>
+
+<style>
+  .product-grid { display: flex; flex-wrap: wrap; gap: 20px; }
+  .product-card { border: 1px solid #ccc; padding: 15px; border-radius: 5px; width: 200px; }
+  .alert-danger { color: red; margin-bottom: 15px; }
+</style>

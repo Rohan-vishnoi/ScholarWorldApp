@@ -2,8 +2,10 @@ import { Component } from '@angular/core';
 import {Router} from "@angular/router";
 import {Store} from "@ngrx/store";
 import {AppState} from "../../app.combineReducer";
-import {Subject, takeUntil} from "rxjs";
+import {Observable, Subject, takeUntil} from "rxjs";
 import {logOutUser} from "../store/actions/auth.actions";
+import {CartService} from "../store/service/cart.service";
+import {map} from "rxjs/operators";
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
@@ -14,7 +16,9 @@ export class NavbarComponent {
 
   private unsubscribe$ = new Subject<void>();
 
-  constructor(private router: Router, private store: Store<AppState>) { }
+  constructor(private router: Router, private store: Store<AppState>, private cartService : CartService) {
+
+  }
 
 
   isLoginButton:boolean = true;

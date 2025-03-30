@@ -10,8 +10,7 @@ export class ProfileManagementComponent implements OnInit {
   userEmail: string | undefined;
 
   ngOnInit(): void {
-    // Fetch user data from a service or local storage
-    this.userName = 'John Doe'; // Replace with actual data
-    this.userEmail = 'john.doe@example.com'; // Replace with actual data
+    this.userName = 'John Doe';
+    this.userEmail = 'john.doe@example.com';
   }
 }

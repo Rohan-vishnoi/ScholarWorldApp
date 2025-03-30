@@ -6,6 +6,8 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.math.BigDecimal;
+
 @Setter
 @Getter
 @Entity
@@ -28,7 +30,8 @@ public class Product {
     private String title;
 
     @JsonProperty("price")
-    private double price;
+    @Column(nullable = false, precision = 10, scale = 2)
+    private BigDecimal price;
 
     @JsonProperty("category")
     @ManyToOne(cascade = CascadeType.PERSIST)
@@ -57,12 +60,12 @@ public class Product {
         this.title = title;
     }
 
-    public double getPrice() {
+    public BigDecimal getPrice() {
         return price;
     }
 
     public void setPrice(double price) {
-        this.price = price;
+        this.price = BigDecimal.valueOf(price);
     }
 
     public Category getCategory() {
@@ -80,4 +83,5 @@ public class Product {
     public void setDescription(String description) {
         this.description = description;
     }
+
 }

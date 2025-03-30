@@ -31,7 +31,11 @@ import {AuthService} from "./app/store/service/auth.service";
 import {JwtInterceptor, JwtModule} from "@auth0/angular-jwt";
 import { ProfileManagementComponent } from './app/profile-management/profile-management.component';
 import { ProductCatalogComponent } from './app/product-catalog/product-catalog.component';
-import {CartComponent} from "./app/cart/cart.component";
+import {ProductListComponent} from "./app/product-list/product-list.component";
+import {CartViewComponent} from "./app/cart-view/cart-view.component";
+import {CartService} from "./app/store/service/cart.service";
+import {ProductService} from "./app/store/service/product.service";
+import {PaymentComponent} from "./app/payment/payment.component";
 
 export function tokenGetter() {
   return localStorage.getItem('token');
@@ -47,7 +51,9 @@ export function tokenGetter() {
     NavbarComponent,
     ProfileManagementComponent,
     ProductCatalogComponent,
-    CartComponent
+    ProductListComponent,
+    CartViewComponent,
+    PaymentComponent
   ],
   imports: [
     BrowserModule,
@@ -81,6 +87,8 @@ export function tokenGetter() {
   providers: [
     RegistrationService,
     AuthService,
+    CartService,
+    ProductService,
     provideHttpClient(),
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true }
 

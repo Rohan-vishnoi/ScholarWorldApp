@@ -12,7 +12,6 @@ export class ForgetPasswordComponent {
   };
 
   onSubmit() {
-    // Call a service to handle the password reset logic
     console.log('New Password:', this.forgetPasswordData.newPassword);
     console.log('Confirm Password:', this.forgetPasswordData.confirmPassword);
   }

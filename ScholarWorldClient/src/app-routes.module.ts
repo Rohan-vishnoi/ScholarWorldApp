@@ -6,7 +6,7 @@ import {NgModule} from "@angular/core";
 import {ProfileManagementComponent} from "./app/profile-management/profile-management.component";
 import {ForgetPasswordComponent} from "./app/forgetpassword/forgetpassword.component";
 import {ProductCatalogComponent} from "./app/product-catalog/product-catalog.component";
-import {CartComponent} from "./app/cart/cart.component";
+import {CartViewComponent} from "./app/cart-view/cart-view.component";
 
 export const routes: Routes = [
   {path:"", component: LandingPageComponent},
@@ -15,7 +15,8 @@ export const routes: Routes = [
   {path:"ProfileManagement", component: ProfileManagementComponent},
   {path:"forgetpassword", component: ForgetPasswordComponent},
   {path:"product-catalog", component: ProductCatalogComponent},
-  {path:"cart", component: CartComponent}
+  {path:'cart', component:CartViewComponent},
+  { path: '**', redirectTo: '/products' }
 ];
 
 @NgModule({

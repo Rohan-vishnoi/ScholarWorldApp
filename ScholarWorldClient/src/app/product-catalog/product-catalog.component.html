@@ -13,8 +13,7 @@
         <p><strong>Count:</strong>{{ item.count }}</p>
       </mat-card-content>
       <mat-card-actions>
-        <button mat-button>BUY</button>
-        <button mat-button>SHARE</button>
+        <button mat-button (click)="addToCart(item)">Add to Cart</button>
       </mat-card-actions>
     </mat-card>
   </ng-container>

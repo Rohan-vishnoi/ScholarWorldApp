@@ -8,21 +8,27 @@ import {AuthEffects} from "./app/store/effects/auth.effects";
 import {ProductEffects} from "./app/store/effects/product.effects";
 import {ProductState} from "./app/store/state/product.state";
 import {productReducer} from "./app/store/reducer/product.reducer";
+import {CartState} from "./app/store/state/cart.state";
+import {cartReducer} from "./app/store/reducer/cart.reducer";
+import {CartEffects} from "./app/store/effects/cart.effects";
 
 export interface AppState{
   registrationState : RegistrationState,
   authState:AuthState,
-  productState:ProductState
+  productState:ProductState,
+  cartState:CartState
 }
 
 export const reducers: ActionReducerMap<AppState, any> = {
   registrationState : registrationReducer,
   authState:authReducer,
-  productState:productReducer
+  productState:productReducer,
+  cartState:cartReducer
 }
 
 export const effects = [
   RegistrationEffects,
   AuthEffects,
-  ProductEffects
+  ProductEffects,
+  CartEffects
 ]

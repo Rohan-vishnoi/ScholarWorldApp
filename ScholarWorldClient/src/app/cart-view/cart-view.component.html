@@ -1,0 +1,58 @@
+<h2>Shopping Cart</h2>
+
+<div *ngIf="error" class="alert alert-danger">
+  {{ error }}
+</div>
+
+<div *ngIf="(cart$ | async) as cart; else loadingOrError">
+  <div *ngIf="!cart || cart.items.length === 0" class="empty-cart">
+    Your cart is empty.
+  </div>
+
+  <div *ngIf="cart && cart.items.length > 0">
+    <table>
+      <thead>
+      <tr>
+        <th>Product</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th>Total</th>
+        <th>Actions</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let item of cart.items">
+        <td>{{ item.productName }}</td>
+        <td>{{ item.pricePerUnit | currency:'USD' }}</td>
+        <td>
+          <input type="number"
+                 min="1"
+                 [value]="item.quantity"
+                 #quantityInput
+                 (change)="updateQuantity(item, quantityInput.value)"
+                 style="width: 60px;">
+        </td>
+        <td>{{ item.lineTotal | currency:'USD' }}</td>
+        <td>
+          <button (click)="removeItem(item.itemId)">Remove</button>
+        </td>
+      </tr>
+      </tbody>
+      <tfoot>
+      <tr>
+        <td colspan="3"><strong>Total:</strong></td>
+        <td>
+          <button (click)="clearCart()" class="clear-button">Clear Cart</button>
+        </td>
+      </tr>
+      </tfoot>
+    </table>
+
+    <button class="checkout-button">Proceed to Checkout</button>
+  </div>
+
+</div>
+
+<ng-template #loadingOrError>
+  <div *ngIf="!error">Loading cart...</div>
+</ng-template>

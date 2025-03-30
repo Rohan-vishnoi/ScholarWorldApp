@@ -8,7 +8,6 @@ import { Component } from '@angular/core';
 export class LandingPageComponent {
 
 
-  productImageUrl = 'https://unsplash.com/photos/monitor-on-desk-LTDuGUByp6Y'; // Replace with your image path
 
   constructor() { }
 
