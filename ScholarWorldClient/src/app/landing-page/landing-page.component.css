@@ -1,4 +1,4 @@
-landing-container {
+.landing-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -39,4 +39,40 @@ mat-toolbar.mat-toolbar.mat-primary.mat-toolbar-single-row {
 
 form.example-form.ng-pristine.ng-valid.ng-touched {
     height: 54px;
+}
+
+.hero-section {
+  /* Replace 'hero-bg.jpg' with the actual name of the image you placed in the public folder */
+background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/LandingPageImage.png');  background-size: cover;
+  background-position: center;
+  height: 60vh; /* Takes up 60% of the viewport height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+
+.hero-content {
+  max-width: 800px;
+  padding: 20px;
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.hero-content p {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+}
+
+.catalog-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 40px 20px;
 }

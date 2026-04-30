@@ -29,10 +29,11 @@ export class NavbarComponent {
       .subscribe((authData) => {
         if (authData.token) {
           this.isLoginButton = false;
-          this.router.navigate(['']);
+          if (this.router.url === '/Login' || this.router.url === '/Registration') {
+            this.router.navigate(['']);
+          }
         } else {
           this.isLoginButton = true;
-          this.router.navigate(['Login']);
         }
       });
   }
@@ -59,6 +60,7 @@ export class NavbarComponent {
 
   logout = (): any => {
     this.store.dispatch(new logOutUser());
+    this.router.navigate(['/Login']);
   }
 
   showCartView = (): any => {

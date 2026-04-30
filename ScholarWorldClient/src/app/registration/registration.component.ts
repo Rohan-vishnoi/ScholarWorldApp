@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
-import {RegistrationService} from "../store/service/registration.service";
 import {Store} from "@ngrx/store";
 import {RegisterUser} from "../store/actions/registration.actions";
 import {AppState} from "../../app.combineReducer";
+import {Router} from "@angular/router";
 
 @Component({
     selector: 'app-registration',
@@ -11,7 +11,7 @@ import {AppState} from "../../app.combineReducer";
 })
 export class RegistrationComponent {
 
-    constructor( private store: Store<AppState>) {
+    constructor( private store: Store<AppState>, private router: Router) {
     }
 
 
@@ -23,5 +23,6 @@ export class RegistrationComponent {
 
     onSubmit() {
         this.store.dispatch(new RegisterUser(this.registrationData));
+        this.router.navigate(['/Login'])
     }
 }
