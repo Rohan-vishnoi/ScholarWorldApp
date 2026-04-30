@@ -209,6 +209,22 @@ For any questions, feedback, or issues, please reach out:
 * **GitHub Issues:** [https://github.com/Rohan-vishnoi/ScholarWorldApp/issues](https://github.com/Rohan-vishnoi/ScholarWorldApp/issues)
 * **Email:** **[avirohanvishnoi@gmail.com]** *(Replace with your actual email)*
 
+## AI Chat Assistant
+
+The user types: "Do you have any advanced physics modules?" in Angular frontend.
+
+Angular app sends this text to your backend Chat API.
+ 
+Backend passes the text to the AI.
+
+The AI recognizes the intent and pauses, sending a function call request back to your backend: {"function": "search_products", "arguments": {"search_query": "advanced physics module"}}.
+
+Backend intercepts this, runs your searchDatabase function, and gets the results.
+
+Your backend sends the database results back to the AI.
+
+The AI reads the results and generates a natural, conversational reply: "Yes, we have the 'Advanced Physics Module' available for $49.99! Would you like me to add it to your cart?"
+
 ---
 
 *Thank you for checking out ScholarWorldApp!*
