@@ -211,19 +211,19 @@ For any questions, feedback, or issues, please reach out:
 
 ## AI Chat Assistant
 
-The user types: "Do you have any advanced physics modules?" in Angular frontend.
+1. The user types: "Do you have any advanced physics modules?" in Angular frontend.
 
-Angular app sends this text to your backend Chat API.
+2. Angular app sends this text to your backend Chat API.
  
-Backend passes the text to the AI.
+3. Backend passes the text to the AI.
 
-The AI recognizes the intent and pauses, sending a function call request back to your backend: {"function": "search_products", "arguments": {"search_query": "advanced physics module"}}.
+4. The AI recognizes the intent and pauses, sending a function call request back to your backend: {"function": "search_products", "arguments": {"search_query": "advanced physics module"}}.
 
-Backend intercepts this, runs your searchDatabase function, and gets the results.
+5. Backend intercepts this, runs your searchDatabase function, and gets the results.
 
-Your backend sends the database results back to the AI.
+6. Your backend sends the database results back to the AI.
 
-The AI reads the results and generates a natural, conversational reply: "Yes, we have the 'Advanced Physics Module' available for $49.99! Would you like me to add it to your cart?"
+7. The AI reads the results and generates a natural, conversational reply: "Yes, we have the 'Advanced Physics Module' available for $49.99! Would you like me to add it to your cart?"
 
 ---
 
