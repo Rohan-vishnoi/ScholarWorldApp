@@ -29,4 +29,8 @@ public interface ProductRepo extends JpaRepository<Product, Long> {
     List<Product> getAllProducts();
 
     List<Product> findByTitleContains(String title, Pageable pageable);
+
+    List<Product> findByTitleContainingIgnoreCase(String title);
+
+    List<Product> findByTitleContainingIgnoreCaseOrDescriptionContainingIgnoreCase(String title, String description);
 }

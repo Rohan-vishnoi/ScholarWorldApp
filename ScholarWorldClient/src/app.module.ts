@@ -36,6 +36,8 @@ import {CartViewComponent} from "./app/cart-view/cart-view.component";
 import {CartService} from "./app/store/service/cart.service";
 import {ProductService} from "./app/store/service/product.service";
 import {PaymentComponent} from "./app/payment/payment.component";
+import {ChatAssistantComponent} from "./app/chat-assistant/chat-assistant.component";
+import {ChatService} from "./app/store/service/chat.service";
 
 export function tokenGetter() {
   return localStorage.getItem('token');
@@ -53,7 +55,8 @@ export function tokenGetter() {
     ProductCatalogComponent,
     ProductListComponent,
     CartViewComponent,
-    PaymentComponent
+    PaymentComponent,
+    ChatAssistantComponent
   ],
   imports: [
     BrowserModule,
@@ -89,6 +92,7 @@ export function tokenGetter() {
     AuthService,
     CartService,
     ProductService,
+    ChatService,
     provideHttpClient(),
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true }
 

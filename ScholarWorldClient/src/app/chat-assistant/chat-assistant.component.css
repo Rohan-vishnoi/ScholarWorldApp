@@ -1,0 +1,136 @@
+/* Floating Button */
+.chat-toggle-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #0b2545; /* Deep Scholar Blue */
+  color: white;
+  border: 2px solid #d4af37; /* Academic Gold */
+  border-radius: 30px;
+  padding: 12px 24px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  z-index: 1000;
+  transition: transform 0.2s;
+}
+
+.chat-toggle-btn:hover {
+  transform: scale(1.05);
+}
+
+/* Chat Window */
+.chat-window {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 350px;
+  height: 500px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;
+  overflow: hidden;
+}
+
+.chat-header {
+  background-color: #0b2545;
+  color: white;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 3px solid #d4af37;
+}
+
+.header-title {
+  font-weight: bold;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.chat-messages {
+  flex: 1;
+  padding: 15px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #f8f9fa;
+}
+
+.message-bot, .message-user {
+  max-width: 80%;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.message-bot {
+  background-color: white;
+  color: #333;
+  align-self: flex-start;
+  border: 1px solid #e0e0e0;
+}
+
+.message-user {
+  background-color: #d4af37;
+  color: #0b2545;
+  align-self: flex-end;
+  font-weight: 500;
+}
+
+.typing-indicator {
+  font-style: italic;
+  color: #888;
+}
+
+.chat-input-area {
+  display: flex;
+  padding: 10px;
+  background: white;
+  border-top: 1px solid #eee;
+}
+
+.chat-input-area input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  outline: none;
+}
+
+.chat-input-area button {
+  background-color: #0b2545;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 0 15px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.chat-input-area button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/*
+   Use :host to style the component's host element itself.
+   This makes the entire <app-chat-assistant> component a fixed bubble.
+*/
+:host {
+  position: fixed; /* Position relative to the browser window */
+  bottom: 20px;    /* 20px from the bottom */
+  right: 20px;     /* 20px from the right */
+  z-index: 1000;   /* Ensure it sits on top of other content */
+}
