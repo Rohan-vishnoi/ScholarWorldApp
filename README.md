@@ -225,6 +225,8 @@ For any questions, feedback, or issues, please reach out:
 
 7. The AI reads the results and generates a natural, conversational reply: "Yes, we have the 'Advanced Physics Module' available for $49.99! Would you like me to add it to your cart?"
 
+<img width="6390" height="3055" alt="Client Tier to Application-2026-05-03-114048" src="https://github.com/user-attachments/assets/6496e114-c025-4ce4-b902-278466e577d2" />
+
 ---
 
 *Thank you for checking out ScholarWorldApp!*
