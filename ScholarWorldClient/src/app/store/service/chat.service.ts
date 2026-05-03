@@ -10,7 +10,7 @@ export interface ChatResponse {
 @Injectable({providedIn: 'root'})
 export class ChatService {
 
-  private chatApiUrl = 'http://localhost:8000/auth/chat';
+  private chatApiUrl = 'https://scholarworld-api-653587119328.us-central1.run.app/auth/chat';
   constructor(private http:HttpClient) { }
 
   sendMessage(message: string): Observable<ChatResponse> {

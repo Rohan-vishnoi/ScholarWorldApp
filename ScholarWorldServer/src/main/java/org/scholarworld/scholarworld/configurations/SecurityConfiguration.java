@@ -54,7 +54,7 @@ public class SecurityConfiguration {
         CorsConfiguration configuration = new CorsConfiguration();
 
         // 3. FIXED: Change to your Angular app's URL
-        configuration.setAllowedOrigins(List.of("http://localhost:4200"));
+        configuration.setAllowedOrigins(List.of("http://localhost:4200", "https://scholarworld.web.app"));
 
         // 4. FIXED: Added OPTIONS for browser preflight requests
         configuration.setAllowedMethods(List.of("GET", "POST", "OPTIONS"));

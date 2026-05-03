@@ -6,7 +6,7 @@ import {Observable} from "rxjs";
 @Injectable({ providedIn: 'root' }) // Ensure this is present
 export class RegistrationService {
 
-  private apiUrl = 'http://localhost:8000/auth/signup';
+  private apiUrl = 'https://scholarworld-api-653587119328.us-central1.run.app/auth/signup';
 
   constructor(private http: HttpClient) {}
 

@@ -4,7 +4,7 @@ import {Observable, tap} from "rxjs";
 
 @Injectable({providedIn: 'root'})
 export class AuthService {
-  private loginApiUrl = 'http://localhost:8000/auth/login';
+  private loginApiUrl = 'https://scholarworld-api-653587119328.us-central1.run.app/auth/login';
 
   constructor(private http:HttpClient) {}
 

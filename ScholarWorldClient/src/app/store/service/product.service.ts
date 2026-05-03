@@ -6,7 +6,7 @@ import {Observable} from "rxjs";
 @Injectable({providedIn:'root'})
 export class ProductService {
 
-  private productApiUrl = 'http://localhost:8000/auth/products';
+  private productApiUrl = 'https://scholarworld-api-653587119328.us-central1.run.app/auth/products';
 
   constructor(private http:HttpClient) {}
 
